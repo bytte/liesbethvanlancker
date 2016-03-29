@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #TEMPLATE WIDTHS
+\*------------------------------------*/
+
+
+.c-template {
+    max-width: 1200px;
+}
+
+    .c-template__side {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 50em) {
+        .c-template__side {
+            width: 225px;
+            text-align: right;
+        }
+    }
+
+    .c-template__main {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 50em) {
+        .c-template__main {
+            width: calc(100% - 225px);
+        }
+    }

@@ -1,0 +1,132 @@
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+
+/**
+ * Typographical base selectors.
+ */
+
+
+
+
+
+/**
+ * The base typographic settings.
+ *
+ */
+
+html {
+    font-family: Soleil, sans-serif;
+    font-weight: 400;
+    font-size: 1.125em;
+    line-height: 1.38889;
+    color: rgb(33, 33, 33);
+    text-transform: none;
+    padding-left: .861rem;
+    padding-top: .861rem;
+    padding-right: .861rem;
+    padding-bottom: .861rem;
+}
+
+
+
+
+
+/**
+ * The baseline grid and measure.
+ *
+ * 1) For now we don't need any margin-bottom below titles.
+ */
+
+p,
+h1, h2, h3, h4, h5, h6,
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 0; /* [1] */
+}
+
+
+
+
+/**
+ * Selected text.
+ */
+
+::selection {
+    background-color: rgb(220, 220, 220);
+}
+
+
+
+
+
+/**
+ * Headings.
+ *
+ * Headings generally should be bold. Let's also remove margins.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+	font-weight: 600;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+
+
+
+/**
+ * Soleil semi-bold looks nicer.
+ */
+
+b, strong {
+    font-weight: 600;
+}
+
+
+
+
+
+/**
+ * Blockquotes.
+ *
+ */
+
+blockquote {
+    border-left: 2px solid rgb(33, 33, 33);
+    padding-left: .7em;
+    margin-left: -.7em;
+    font-style: italic;
+}
+
+
+
+
+
+
+/**
+ * Typographic lists.
+ *
+ * 1) Remove default padding.
+ */
+
+ul, ol {
+    padding-left: 0; /* [1] */
+}
+
+/**
+ * 1) Normal list-style-items are positioned a bit too far inside the margin.
+ *    This fixes that problem.
+ */
+
+ol {
+    list-style-position: inside; /* [1] */
+    margin-left: -.9em; /* [1] */
+}
+
+li {
+    list-style-type: none;
+}

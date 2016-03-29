@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    #TEXT-UTILITIES
+\*------------------------------------*/
+
+/**
+ * These are utilities for text.
+ *
+ * Available utilities in this file:
+ * 1. u-text-right: right aligns text.
+ * 2. u-text-center: center aligns text (horizontally).
+ * 3. u-text-left: left align text (horizontally).
+ * 4. u-text-no-underline: hide underline (from links).
+ *
+ *
+ */
+
+
+
+
+
+/**
+ * u-text-right
+ * Right aligns text, e.g. in grid cells.
+ */
+
+.u-text-right {
+	text-align: right !important;
+}
+
+
+
+
+
+/**
+ * u-text-center
+ * Center aligns text, e.g. in grid cells.
+ */
+
+.u-text-center {
+	text-align: center !important;
+}
+
+
+
+
+
+/**
+ * u-text-left
+ * Left aligns text, e.g. in grid cells.
+ */
+
+.u-text-left {
+	text-align: left !important;
+}
+
+
+
+
+
+.u-text-no-underline {
+	border-bottom-width: 0 !important;
+	text-decoration: none !important;
+}

@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+
+/**
+ * A simple usable-anywhere grid system. It has no looks, just creates all the
+ * rows and columns.
+ *
+ * Requirements
+ * 1. An empty parent element with the grid class. Do not apply dimension or
+ *    offset utilities to this element.
+ * 2. One or more children elements with grid__cell class. All content goes
+ *    here. These elements should probably have sizing utilities applied to
+ *    them (using the _wins.widths.css). If an element has no sizing utility
+ *    applied to it, it will grow as width as its content.
+ *
+ * Modifiers
+ * 1. o-grid--gutter: grid with spacing between the cells.
+ * 2. o-grid--align-middle: middle-align all immediate children grid cells.
+ * 3. o-grid--align-bottom: bottom-align all immediate children grid cells.
+ * 4. o-grid--align-right: right-align all grid cells.
+ * 5. o-grid--align-center: center-align all grid cells.
+ */
+
+
+
+
+
+
+/**
+ * The base o-grid element.
+ *
+ * 1) Remove whitespace between cells that appears between inline-block
+ *    elements. It's reset in the cells to whatever is the base font-size (set
+ *    in _base.type.css on the html element).
+ * 2) Make cells vertically align to the top of each other.
+ * 3) A cell will be as wide as its contents. Use the _wins.widths.css utilities
+ *    to control sizing.
+ */
+
+.o-grid {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0; /* [1] */
+}
+
+	.o-grid__cell {
+		display: inline-block;
+		font-size: 1rem; /* [1] */
+		vertical-align: top; /* [2] */
+		width: auto; /* [3] */
+	}
+
+/**
+ * Modifier: grid with gutter.
+ *
+ * 1) Same as padding-left of .grid__cell. To get rid of the first grid cell's
+ *    left space, we use this negative margin-left.
+ * 2) We only want the padding added to the immediate cells. This is important
+ *    as grids are infinitely nestable.
+ */
+
+.o-grid--gutter {
+	margin-left: -40px; /* [1] */
+}
+
+	.o-grid--gutter > .o-grid__cell {
+		padding-left: 40px; /* [1] */
+	}
+
+/**
+ * Modifier: middle align all grid cells
+ *
+ * 1) As grids are infinitely nestable the selector only targets the grid's
+ *    immediate cell children.
+ */
+
+.o-grid--align-middle > .o-grid__cell { /* [1] */
+	vertical-align: middle;
+}
+
+/**
+ * Modifier: bottom align all grid cells
+ *
+ * 1) As grids are infinitely nestable the selector only targets the grid's 
+ *    immediate cell children.
+ */
+
+.o-grid--align-bottom > .o-grid__cell { /* [1] */
+	vertical-align: bottom;
+}
+
+/**
+ * Modifier: right align all grid cells
+ */
+
+.o-grid--align-right {
+	text-align: right;
+}
+
+/**
+ * Modifier: center align all grid cells
+ */
+
+.o-grid--align-center {
+	text-align: center;
+}
