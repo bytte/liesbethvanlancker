@@ -1,9 +1,12 @@
 # Site settings
 title: Liesbeth Van Lancker
 email: liesbethvanlancker@gmail.com
-description: Liesbeth Van Lancker is a nontoxic printmaker and teacher from Gent, Belgium.
-baseurl: "http://liesbethvanlancker.be/v2/" # the subpath of your site, e.g. /blog
-url: "http://liesbethvanlancker.be/v2/" # the base hostname & protocol for your site
+description: Liesbeth Van Lancker is a nontoxic printmaker from Gent, Belgium. Liesbeth draws, etches and occasionally uses soft ground, dry point and monotype. She teaches printmaking at the Academie voor Beeldende Kunst in Gent.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://liesbethvanlancker.be/v2" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+gems:
+- jekyll-email-protect

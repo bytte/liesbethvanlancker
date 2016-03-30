@@ -3,6 +3,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta property="og:title" content="Liesbeth Van Lancker">
+    <meta property="og:type" content="profile">
+    <meta property="og:profile:first_name" content="Liesbeth">
+    <meta property="og:profile:last_name" content="Van Lancker">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/01-01-400.jpg">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
@@ -17,15 +25,16 @@
       })(document);
     </script>
 
-    <link rel="stylesheet" href="{{ "css/generic.normalize.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/generic.box-sizing.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/base.type.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/base.links.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/base.media.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/objects.grid.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/components.masthead.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/components.work.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/components.template.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/wins.text-utilities.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/generic.normalize.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/generic.box-sizing.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/base.type.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/base.links.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/base.media.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/objects.grid.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/components.masthead.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/components.work.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/components.template.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/wins.text-utilities.css" | prepend: site.baseurl }}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
