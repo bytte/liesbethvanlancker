@@ -25,16 +25,18 @@
       })(document);
     </script>
 
-    <link rel="stylesheet" href="{{ "/css/generic.normalize.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/generic.box-sizing.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/base.type.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/base.links.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/base.media.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/objects.grid.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/components.masthead.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/components.work.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/components.template.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/wins.text-utilities.css" | prepend: site.baseurl }}">
+    {% bundle %}
+    - /css/generic.normalize.css
+    - /css/generic.box-sizing.css
+    - /css/base.type.css
+    - /css/base.links.css
+    - /css/base.media.css
+    - /css/objects.grid.css
+    - /css/components.masthead.css
+    - /css/components.work.css
+    - /css/components.template.css
+    - /css/wins.text-utilities.css
+    {% endbundle %}
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>

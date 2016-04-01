@@ -1,7 +1,7 @@
 # Site settings
 title: Liesbeth Van Lancker
 email: liesbethvanlancker@gmail.com
-description: Liesbeth Van Lancker is a nontoxic printmaker from Gent, Belgium. Liesbeth draws, etches and occasionally uses soft ground, dry point and monotype. She teaches printmaking at the Academie voor Beeldende Kunst in Gent.
+description: Liesbeth Van Lancker is a nontoxic printmaker from Ghent, Belgium. Liesbeth draws, etches and occasionally uses soft ground, dry point and monotype. She teaches printmaking at the Academie voor Beeldende Kunst in Gent.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://liesbethvanlancker.be" # the base hostname & protocol for your site
 
@@ -10,3 +10,12 @@ markdown: kramdown
 
 gems:
 - jekyll-email-protect
+
+# asset bundler
+asset_bundler:
+  compress:
+    js: yui
+    css: yui
+  markup_templates:
+    css: '<link rel="stylesheet" href="{{url}}">'
+  base_path: "bundles/"
