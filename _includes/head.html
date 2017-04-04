@@ -25,18 +25,7 @@
       })(document);
     </script>
 
-    {% bundle %}
-    - /css/generic.normalize.css
-    - /css/generic.box-sizing.css
-    - /css/base.type.css
-    - /css/base.links.css
-    - /css/base.media.css
-    - /css/objects.grid.css
-    - /css/components.masthead.css
-    - /css/components.work.css
-    - /css/components.template.css
-    - /css/wins.text-utilities.css
-    {% endbundle %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
